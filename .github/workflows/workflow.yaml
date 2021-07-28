@@ -23,7 +23,9 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
 
-      - run : echo ${{ github.event.head_commit.username }}
-      - run : echo ${{ github.event.head_commit.email }}
-      - run : echo ${{ github.event.commits[0] }}
+      - run : echo ${{ github.event.head_commit.committer.username }}
+      - run : echo ${{ github.event.head_commit.committer.email }}
+      - run : echo ${{ github.event.head_commit.committer.name }}
+      - run : echo ${{ github.event.commits[0].username }}
+      - run : echo ${{ github.event.username }}
       - run: echo ${{ github.event.head_commit.message }}
