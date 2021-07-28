@@ -12,7 +12,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source_folder: '*'
+          source_folder: 'README.md'
           destination_repo: 'PulumiTestOrg/test-app'
           destination_head_branch: 'submission-${{ github.event.head_commit.committer.username }}'
           user_email: ${{ github.event.head_commit.committer.email }}
