@@ -16,5 +16,5 @@ jobs:
           destination_repo: 'PulumiTestOrg/test-app'
           destination_head_branch: 'submission-${{ github.event.head_commit.committer.username }}'
           user_email: ${{ github.event.head_commit.committer.email }}
-          user_name: ${{ github.event.head_commit.committer.name }}
+          user_name: ${{ github.event.head_commit.committer.username }}
           pull_request_reviewers: 'hbhutanideqode'
